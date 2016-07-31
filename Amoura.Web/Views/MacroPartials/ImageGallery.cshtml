@@ -1,0 +1,78 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+@using Iomer.Umbraco.Extensions;
+@{
+    Layout = null;
+    var currNode = umbraco.NodeFactory.Node.GetCurrent();
+    var imageGalleryNodeProperty = currNode.GetProperty("imageGallery");
+
+    List<umbraco.NodeFactory.Node> imageGalleryNodes = new List<umbraco.NodeFactory.Node>();
+    if (imageGalleryNodeProperty != null && imageGalleryNodeProperty.Value != string.Empty)
+    {
+        var imageGalleryNodeIds = imageGalleryNodeProperty.Value.Split(',').Select(i => int.Parse(i)).ToList();
+        imageGalleryNodes.AddRange(imageGalleryNodeIds.Select(i => new umbraco.NodeFactory.Node(i)));
+    }    
+}
+
+@if (imageGalleryNodes.Any())
+{
+
+
+
+<div class="span7">
+ 
+<div class="grid_gallery clearfix">
+<div class="grid_gallery_inner">
+
+    @foreach (var imageNode in imageGalleryNodes)
+    {
+        var mediaId = Int32.Parse(imageNode.GetProperty("image").Value);
+        var imageUrl = Iomer.Umbraco.Extensions.NodeUtility.GetMediaPath(mediaId);
+        var imageThumbnailId = 0;
+        var imageThumbnailUrl = string.Empty;
+        var imageDescription = imageNode.GetProperty("imageTitle").Value;
+        if (imageNode.GetProperty("imageDescription") != null && !string.IsNullOrEmpty(imageNode.GetProperty("imageDescription").Value))
+        {
+            imageDescription = imageNode.GetProperty("imageDescription").Value;
+        }
+        if (imageNode.GetProperty("thumbnailImage") != null && !string.IsNullOrEmpty(imageNode.GetProperty("thumbnailImage").Value))
+        {
+            imageThumbnailId = Int32.Parse(imageNode.GetProperty("thumbnailImage").Value);
+            if (imageThumbnailId > 0)
+            {
+                imageThumbnailUrl = Iomer.Umbraco.Extensions.NodeUtility.GetMediaPath(imageThumbnailId);
+            }
+        }
+        if (imageThumbnailUrl == string.Empty)
+        {
+            imageThumbnailUrl = imageUrl.Replace(".jpg","_thumb.jpg");
+            imageThumbnailUrl = imageUrl.Replace(".gif", "_thumb.gif");
+            imageThumbnailUrl = imageUrl.Replace(".png", "_thumb.png");
+        }
+            
+        <div class="gallery_item">
+        <figure class="featured-thumbnail single-gallery-item">
+        <a href="@imageUrl" class="image-wrap" rel="prettyPhoto[gallery]">
+        <img alt="@imageDescription" src="@imageThumbnailUrl" width="260" height="160">
+        <span class="zoom-icon"></span>
+        </a>
+        </figure>
+        </div>
+        
+
+        @*<div class="gallery_item">
+        <figure class="featured-thumbnail single-gallery-item">
+        <a href="http://livedemo00.template-help.com/wordpress_46021/wp-content/uploads/2013/08/img-14.jpg" class="image-wrap" rel="prettyPhoto[gallery]">
+        <img alt="img-14" src="http://livedemo00.template-help.com/wordpress_46021/wp-content/uploads/2013/08/img-14-260x160.jpg" width="260" height="160">
+        <span class="zoom-icon"></span>
+        </a>
+        </figure>
+        </div>*@
+            
+}
+
+</div>
+</div>
+</div>
+        
+    
+}

@@ -1,0 +1,102 @@
+﻿@inherits UmbracoViewPage<IPublishedContent>
+@using Iomer.Umbraco.Extensions.String
+@using umbraco.NodeFactory
+@using System.Configuration
+@using Iomer.Umbraco.Extensions
+@using Iomer.Umbraco.Extensions.String
+
+@functions{
+    bool IsSelected(int nodeId)
+    {
+        var isSelected = false;
+        var currentNode = umbraco.NodeFactory.Node.GetCurrent();
+        var checkNode = new umbraco.NodeFactory.Node(nodeId);
+
+        while (currentNode != null && isSelected == false)
+        {
+            if (currentNode.Id == checkNode.Id)
+            {
+                currentNode = null;
+                isSelected = true;
+            }
+            else
+            {
+                if (currentNode.Parent != null)
+                {
+                    currentNode = new umbraco.NodeFactory.Node(currentNode.Parent.Id);
+                }
+                else
+                {
+                    currentNode = null;
+                }
+            }
+        }
+
+        return isSelected;
+    }
+}
+
+
+@helper Traverse(dynamic node)
+{
+
+    
+    var allowAliases = "textPage,redirectPage,eventList,newsList,frequentlyAskedQuestions,list,search,formPage,photoGalleryPage";
+    
+    //separates aliases in a string so we can use IndexOf to find aliases that match ",textPage,"
+    var allowAliasesSeparate = allowAliases;
+    if (allowAliasesSeparate != "")
+    {
+        allowAliasesSeparate = "," + allowAliasesSeparate + ",";
+    }
+    
+    var items = node.Children;
+    string strAliases = allowAliases;
+    var allowAliasesList = strAliases.Split(',').ToList();
+    var itemNodes = new List<Node>();
+    foreach (var item in items)
+    {
+        itemNodes.Add(new Node(item.Id));
+    }
+    itemNodes = itemNodes
+        .Where(i => !i.NodeHidden() && (library.HasAccess(i.Id, i.Path)))
+        .Where(i => allowAliasesList.Contains(i.NodeTypeAlias))
+        .ToList();
+
+    var index = 0;
+    foreach (var item in itemNodes)
+    {
+        if (index == 0) {
+            @Html.Raw("<ul class=\"nav navbar-nav\">")
+            @Html.Raw("<li><a href=\"/\">Home</a></li>")
+        }
+        else {
+            if (index == 0) {
+                @Html.Raw("<ul class=\"sub-menu\">")
+            }
+        }
+
+        var selected = item.Id == Model.Id || IsSelected(item.Id);
+       
+        var itemChildren = item.ChildrenAsList.Where(i => !i.NodeHidden() && (library.HasAccess(i.Id, i.Path))).Where(i => allowAliasesList.Contains(i.NodeTypeAlias)).ToList();
+
+        <li>
+            <a href="#section@(item.Id)">@item.GetTitle()</a>
+            @Traverse(item)
+        </li>
+        index++;
+    }
+
+
+    if (index <= 0)
+    {
+        return;
+    }
+    @Html.Raw("</ul>")
+}
+
+@Traverse(@Model.AncestorOrSelf(1))
+
+
+
+

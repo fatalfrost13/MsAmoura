@@ -1,0 +1,436 @@
+{
+  "name": "Personalize",
+  "created": "2016-07-05T22:07:14.2811543-06:00",
+  "pages": [
+    {
+      "fieldSets": [
+        {
+          "caption": null,
+          "sortOrder": 0,
+          "id": "c5a3c7d1-e565-41e1-9473-a3dde8862450",
+          "page": "00000000-0000-0000-0000-000000000000",
+          "containers": [
+            {
+              "caption": null,
+              "width": 12,
+              "fields": [
+                {
+                  "caption": "Text field",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "textField",
+                  "id": "f70a5adf-4d7c-4fdf-aaf9-75980b51309f",
+                  "fieldTypeId": "e3fbf6c4-f46c-495e-aff8-4b3c227b4a98",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": false,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": null,
+                  "settings": {
+                    "Caption": "Contact Information",
+                    "BodyText": ""
+                  },
+                  "preValues": []
+                },
+                {
+                  "caption": "Name",
+                  "tooltip": "Contact's name",
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "name",
+                  "id": "1864a67c-9a1a-40aa-b5d1-5288b4fe3dc6",
+                  "fieldTypeId": "3f92e01b-29e2-4a30-bf33-9df5580ed52c",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": false,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": null,
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": []
+                },
+                {
+                  "caption": "Email",
+                  "tooltip": "Contact's email",
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "email",
+                  "id": "788d11b4-7521-4fd9-e406-d4db5ef11aa3",
+                  "fieldTypeId": "3f92e01b-29e2-4a30-bf33-9df5580ed52c",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": false,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": null,
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": []
+                },
+                {
+                  "caption": "Text field",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "textField",
+                  "id": "d7ebdf85-653b-4b83-f8c8-e62b72de4521",
+                  "fieldTypeId": "e3fbf6c4-f46c-495e-aff8-4b3c227b4a98",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": false,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": null,
+                  "settings": {
+                    "Caption": "Pick Your Style!",
+                    "BodyText": "The information below pertains to the wearer"
+                  },
+                  "preValues": []
+                },
+                {
+                  "caption": "Design Styles",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "designStyles",
+                  "id": "eaa21afd-4b30-4d59-dabe-fcd7c458c602",
+                  "fieldTypeId": "0dd29d42-a6a5-11de-a2f2-222256d89593",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": false,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": {
+                    "id": "00000000-0000-0000-0000-000000000000",
+                    "enabled": false,
+                    "actionType": "Show",
+                    "logicType": "All",
+                    "rules": []
+                  },
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": [
+                    "Bikini Cover / Wrap",
+                    "Dress",
+                    "Jumper",
+                    "Sweater"
+                  ]
+                },
+                {
+                  "caption": "Dress Options",
+                  "tooltip": "If you selected 'Dress' for Design style, please select a Dress option.",
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "dressOptions",
+                  "id": "5cd07e28-06f6-44c6-f951-092ca07a3cc9",
+                  "fieldTypeId": "0dd29d42-a6a5-11de-a2f2-222256d89593",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": false,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": {
+                    "id": "00000000-0000-0000-0000-000000000000",
+                    "enabled": false,
+                    "actionType": "Show",
+                    "logicType": "Any",
+                    "rules": []
+                  },
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": [
+                    "Maxi",
+                    "Mini"
+                  ]
+                },
+                {
+                  "caption": "Favorite Color(s)",
+                  "tooltip": "Female's favorite color",
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "favoriteColorS",
+                  "id": "cef0f000-2f55-4ef0-a6a7-80ce8e2beec2",
+                  "fieldTypeId": "3f92e01b-29e2-4a30-bf33-9df5580ed52c",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": false,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": null,
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": []
+                },
+                {
+                  "caption": "Age",
+                  "tooltip": "Female's age",
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "age",
+                  "id": "9a99aaf8-3d00-4f03-90be-ae5bb467b651",
+                  "fieldTypeId": "0dd29d42-a6a5-11de-a2f2-222256d89593",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": false,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": null,
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": [
+                    "Under 12 years old",
+                    "12-17 years old",
+                    "18-24 years old",
+                    "25-34 years old",
+                    "35-44 years old",
+                    "45-54 years old",
+                    "55-64 years old",
+                    "65-74 years old",
+                    "75 years or older"
+                  ]
+                },
+                {
+                  "caption": "Height",
+                  "tooltip": "Feet / Inches",
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "height",
+                  "id": "6b0e2f03-44fa-4f45-d5ec-6b54e0dada69",
+                  "fieldTypeId": "3f92e01b-29e2-4a30-bf33-9df5580ed52c",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": false,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": null,
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": []
+                },
+                {
+                  "caption": "General Size",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "generalSize",
+                  "id": "6bb16ee0-ddd1-411c-a15e-3602002520a5",
+                  "fieldTypeId": "0dd29d42-a6a5-11de-a2f2-222256d89593",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": false,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": null,
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": [
+                    "XS - S",
+                    "S - M",
+                    "M - L",
+                    "L - XL"
+                  ]
+                },
+                {
+                  "caption": "Detailed Measurements",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "detailedMeasurements",
+                  "id": "7e9f9370-6744-4ac2-e6ff-19da00eecaf2",
+                  "fieldTypeId": "e3fbf6c4-f46c-495e-aff8-4b3c227b4a98",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": false,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": null,
+                  "settings": {
+                    "DefaultValue": "",
+                    "Caption": "Additional Measurement Details",
+                    "BodyText": "Recommended"
+                  },
+                  "preValues": []
+                },
+                {
+                  "caption": "Bust",
+                  "tooltip": "Inches",
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "bust",
+                  "id": "054cd0f0-869d-4bc2-f4d4-f0d42237df51",
+                  "fieldTypeId": "3f92e01b-29e2-4a30-bf33-9df5580ed52c",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": false,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": {
+                    "id": "00000000-0000-0000-0000-000000000000",
+                    "enabled": true,
+                    "actionType": "Show",
+                    "logicType": "All",
+                    "rules": []
+                  },
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": []
+                },
+                {
+                  "caption": "Waist",
+                  "tooltip": "Inches",
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "waist",
+                  "id": "8418de04-5554-4e26-c930-7ddc2b112837",
+                  "fieldTypeId": "3f92e01b-29e2-4a30-bf33-9df5580ed52c",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": false,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": null,
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": []
+                },
+                {
+                  "caption": "Hips",
+                  "tooltip": "Inches",
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "hips",
+                  "id": "e5c6b87d-1358-4435-cb7c-731a89744e0a",
+                  "fieldTypeId": "3f92e01b-29e2-4a30-bf33-9df5580ed52c",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": false,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": null,
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": []
+                },
+                {
+                  "caption": "Buttox",
+                  "tooltip": "Inches",
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "buttox",
+                  "id": "bf2dfb0c-d537-4344-a04f-4baadddfad66",
+                  "fieldTypeId": "3f92e01b-29e2-4a30-bf33-9df5580ed52c",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": false,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": null,
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": []
+                },
+                {
+                  "caption": "Shoulder to Buttox",
+                  "tooltip": "Inches",
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "shoulderToButtox",
+                  "id": "b2ab4eff-626a-4dea-d160-719e2a55480a",
+                  "fieldTypeId": "3f92e01b-29e2-4a30-bf33-9df5580ed52c",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": false,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": null,
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": []
+                },
+                {
+                  "caption": "Additional Comments",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "additionalComments",
+                  "id": "98000481-0a9a-4160-e2d1-8d75dda307e9",
+                  "fieldTypeId": "023f09ac-1445-4bcb-b8fa-ab49f33bd046",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "mandatory": false,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": null,
+                  "settings": {
+                    "DefaultValue": ""
+                  },
+                  "preValues": []
+                }
+              ]
+            }
+          ],
+          "condition": null
+        }
+      ],
+      "caption": "",
+      "sortOrder": 0,
+      "id": "00000000-0000-0000-0000-000000000000",
+      "form": "00000000-0000-0000-0000-000000000000"
+    }
+  ],
+  "id": "ff5404d4-a27d-494a-95b0-7868f44801db",
+  "fieldIndicationType": "MarkMandatoryFields",
+  "indicator": "",
+  "showValidationSummary": false,
+  "hideFieldValidation": false,
+  "requiredErrorMessage": "{0} is mandatory",
+  "invalidErrorMessage": "{0} is not valid",
+  "messageOnSubmit": "Thank you",
+  "goToPageOnSubmit": 0,
+  "xPathOnSubmit": null,
+  "manualApproval": false,
+  "storeRecordsLocally": true,
+  "cssClass": null,
+  "disableDefaultStylesheet": false,
+  "useClientDependency": false,
+  "workflows": [
+    "dd5687aa-b8ca-4f40-bf06-a8ca88907ba2"
+  ],
+  "datasource": null,
+  "submitLabel": null,
+  "nextLabel": null,
+  "prevLabel": null
+}

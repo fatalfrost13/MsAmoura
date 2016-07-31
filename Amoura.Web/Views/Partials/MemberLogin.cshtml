@@ -1,0 +1,106 @@
+﻿@model Amoura.Web.Models.AccountModel
+@using Iomer.Umbraco.Extensions
+@using Amoura.Web.Data
+@using Umbraco.Web
+
+@{
+    var currNode = umbraco.NodeFactory.Node.GetCurrent();
+    
+    if (Request.QueryString["logout"] == "1" || currNode.Name == "Logout"){
+        var memberService = new Amoura.Web.Controllers.MembershipController();
+        var redirectUrl = memberService.MemberLogout();
+        Response.Redirect(redirectUrl);
+    }
+}
+
+@if (User.Identity.IsAuthenticated)
+{
+    <div class="amouraForm">
+        <p>
+            Logged in as: <strong>@User.Identity.Name</strong>
+            @*<br/><br/>
+            Click <a href="/change-password.aspx">here</a> to change your password.
+            <br/><br/>*@
+        </p>
+      
+        <p>
+            @Html.ActionLink("Log out", "MemberLogout", "Membership", null, new { @class = "button", id="memberLogoutButton" })
+        </p>
+    </div>
+}
+else
+{
+
+    using (Html.BeginUmbracoForm<Amoura.Web.Controllers.MembershipController>("MemberLogin", null,
+    new { id = "loginform", @class = "amouraForm" }))
+    {
+        <div class="loginLeft">
+
+            <table>
+                <tr>
+                    <td class="prompt">@Html.LabelFor(i => i.UserName):</td>
+                    <td>@Html.TextBoxFor(i => i.UserName, new { value = "", required = "true", @placeholder = "Email" })</td>
+                </tr>
+                <tr>
+                    <td class="prompt">@Html.LabelFor(i => i.Password):</td>
+                    <td>@Html.PasswordFor(i => i.Password, new { value = "", required = "true", placeholder = "Password" })</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        @Html.CheckBoxFor(i => i.RememberMe, new { @class="checkboxLabel" })
+                        @Html.LabelFor(i => i.RememberMe)
+                    </td>
+                </tr>
+                <tr><td colspan="2">&nbsp;</td></tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Login" />
+                    </td>
+                </tr>
+
+                @{
+                    var errorMessage = "";
+                    var customErrors = ViewContext.ViewData.ModelState.SingleOrDefault(i => i.Key == "CustomError");
+                    if (customErrors.Value != null && customErrors.Value.Errors.Any())
+                    {
+                        var error = customErrors.Value.Errors.SingleOrDefault();
+                        if (error != null)
+                        {
+                            errorMessage = error.Exception.Message;
+                        }
+                    }
+                    TempData["UserValidated"] = null;
+                }
+
+
+                @if (errorMessage != string.Empty)
+                {
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div class="failure">@Html.Raw(errorMessage)</div>
+                        </td>
+                    </tr>
+                }
+                <tr>
+                    <td></td>
+                    <td><br /><a href="/forgot-password/">Forgot Password?</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="loginRight amouraForm">
+            <h2>Don't have an account?</h2>
+            @Html.Raw(currNode.GetNodeValue(DocumentFields.bodyText.ToString()))
+            @{
+                var createAccountUrl = "/create-account/";
+                if (Request.QueryString["returnurl"] != null && Request.QueryString["returnurl"] != string.Empty)
+                {
+                    createAccountUrl = string.Format("{0}?returnurl={1}", createAccountUrl, Url.Encode(Request.QueryString["returnurl"]));
+                }
+            }
+            <a href="@createAccountUrl" class="button">Create an Account</a>
+        </div>
+    }
+}

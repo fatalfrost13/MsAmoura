@@ -1,0 +1,14 @@
+{
+  "id": "dd5687aa-b8ca-4f40-bf06-a8ca88907ba2",
+  "name": "Send email to terence.jee@hotmail.com when submitted",
+  "form": "ff5404d4-a27d-494a-95b0-7868f44801db",
+  "active": true,
+  "workflowTypeId": "e96badd7-05be-4978-b8d9-b3d733de70a5",
+  "executesOn": "Submitted",
+  "settings": {
+    "Email": "terence.jee@hotmail.com",
+    "Subject": "the form Personalize was submitted",
+    "Message": "the form Personalize was submitted, this is the list of values it contained, you can turn this email off under workflows in Umbraco Contour"
+  },
+  "sortOrder": 0
+}

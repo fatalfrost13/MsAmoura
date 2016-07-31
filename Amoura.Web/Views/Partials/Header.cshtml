@@ -1,0 +1,134 @@
+﻿@inherits UmbracoViewPage<IPublishedContent>
+@{
+    ViewBag.Title = "Header";
+}
+
+<header class="motopress-wrapper header">
+<div class="container">
+<div class="row">
+<div class="span12" data-motopress-wrapper-file="wrapper/wrapper-header.php" data-motopress-wrapper-type="header" data-motopress-id="5431c72f4eda7">
+<div class="row">
+
+<div class="span9" data-motopress-type="static" data-motopress-static-file="static/static-nav.php">
+<nav class="nav nav__primary clearfix">
+@Umbraco.RenderMacro("Navigation", new { maxLevelForSubNav = 0, navClass = "sf-menu", startLevel="1", allowAliases="textPage,redirectPage,eventList,newsList,frequentlyAskedQuestions,list,search,formPage,photoGalleryPage" })
+</nav>
+
+
+</div>
+
+<div class="span3 social-nets-wrapper" data-motopress-type="static" data-motopress-static-file="static/static-social-networks.php">
+ 
+
+<ul class="social">
+@*<li>
+    <a href="/create-account/" class="signUpLink">Sign up</a>
+</li>*@
+@*<li>
+    <a href="http://msamoura.ca/products/" title="ebay">
+        <img src="/content/themes/theme46021/images/icons/ebay.png" alt="ebay">
+    </a>
+</li>*@
+<li>
+    <a href="https://twitter.com/MSAmouras" title="twitter" target="_blank">
+        <img src="/content/themes/theme46021/images/icons/twitter.png" alt="twitter">
+    </a>
+</li>
+<li>
+    <a href="https://www.facebook.com/amourams" title="facebook" target="_blank">
+        <img src="/content/themes/theme46021/images/icons/facebook.png" alt="facebook">
+    </a>
+</li>
+<li>
+    <a href="https://instagram.com/worldofamoura/" title="instagram" target="_blank">
+        <img src="/content/themes/theme46021/images/icons/instagram.png" alt="instagram">
+    </a>
+</li>
+@*<li>
+    <a href="https://www.youtube.com/channel/UCqZBeFO0LGruC8vRcmSL-BA" target="_blank" title="youtube">
+        <img src="/content/themes/theme46021/images/icons/youtube.png" alt="youtube">
+    </a>
+</li>*@
+<!--<li>
+    <a href="#" title="google">
+        <img src="/content/themes/theme46021/images/icons/googleplus.png" alt="google">
+    </a>
+</li>
+<li>
+    <a href="#" title="rss">
+        <img src="/content/themes/theme46021/images/icons/feed.png" alt="rss">
+    </a>
+</li>-->
+</ul> 
+</div>
+</div>
+<div class="row">
+<div class="span12 hidden-phone" data-motopress-type="static" data-motopress-static-file="static/static-search.php">
+ 
+  </div>
+</div>
+<div class="row">
+<div class="span6" data-motopress-type="static" data-motopress-static-file="static/static-logo.php">
+ 
+<div class="logo pull-left">
+<a href="/" class="logo_h logo_h__img amouraLogo">
+    @*Amoura*@
+    @*<img src="/content/themes/theme46021/images/logo.png" alt="music  life" title="">*@
+    <img src="/Images/msAmouraLogo.png" style="width:200px" />
+</a>
+</div>
+
+</div>
+<div class="span6" data-motopress-type="dynamic-sidebar" data-motopress-sidebar-id="header-sidebar">
+<div id="text-8"> 
+    
+    <div class="textwidget">
+        <script type="text/javascript">
+						$(window).load(function() {
+							$("#flexslider_ttaoakviek").flexslider({
+								animation: "fade",
+								smoothHeight : true,
+								directionNav: true,
+								controlNav: false
+							});
+						});</script>
+
+        @*<div id="flexslider_ttaoakviek" class="flexslider no-bg news">
+            <ul class="slides">
+                <li>
+                    <h5>
+                    </h5>
+                    <div class="post_options"></div>
+                    <p class="excerpt">
+                        Zodiwraps 2015 by Ms. Amoura on Sale Now!
+                    </p>
+                </li>
+                <li>
+                    <h5>
+                    </h5>
+                    <div class="post_options"></div>
+                    <p class="excerpt">
+                        I'm a Gemini, what's your Zodiac Sign?
+                    </p>
+                </li>
+                <li>
+                    <h5>
+                    </h5>
+                    <div class="post_options"></div>
+                    <p class="excerpt">
+                        Follow and post your best selfie with <strong>#2016Babes</strong> to qualify!
+                    </p>
+                </li>
+            </ul>
+        </div>*@ 
+
+    </div>
+    
+
+</div> 
+
+</div>
+</div> </div>
+</div>
+</div>
+</header>

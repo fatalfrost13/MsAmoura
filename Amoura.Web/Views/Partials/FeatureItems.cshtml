@@ -1,0 +1,37 @@
+﻿@using Iomer.Umbraco.Extensions;
+@{
+    Layout = null;
+    var currNode = umbraco.NodeFactory.Node.GetCurrent();
+    var featureNodeProperty = currNode.GetProperty("featureItems");
+
+    List<umbraco.NodeFactory.Node> featureNodes = new List<umbraco.NodeFactory.Node>();
+    if (featureNodeProperty != null && featureNodeProperty.Value != string.Empty)
+    {
+        var featureNodeIds = featureNodeProperty.Value.Split(',').Select(i => int.Parse(i)).ToList();
+        featureNodes.AddRange(featureNodeIds.Select(i => new umbraco.NodeFactory.Node(i)));
+    }    
+}
+@if (featureNodes.Any())
+{
+    <div class="row">
+    @foreach (var featureNode in featureNodes)
+    {
+        var mediaId = Int32.Parse(featureNode.GetProperty("image").Value);
+        var imageUrl = Iomer.Umbraco.Extensions.NodeUtility.GetMediaPath(mediaId);
+        //var linkId = Int32.Parse(featureNode.GetProperty("imageLink").Value);
+        //var linkeNode = new umbraco.NodeFactory.Node(linkId);
+        var imageLink = featureNode.GetUrl("imageLink");
+        var linkTarget = featureNode.GetTarget("imageLink");
+
+        
+        <div class="span3">
+            <p><a href="@imageLink" target="@linkTarget"><img class="alignnone size-full wp-image-1892" alt="" src="@imageUrl" width="270" height="146"/></a></p>
+            <div class="hero-unit ">
+                <h1><a href="@imageLink">@featureNode.GetTitle()</a><br /><br /></h1>
+                @Html.Raw(featureNode.GetProperty("imageDescription").Value)
+                <div class="btn-align"><a href="@imageLink" title="read more" class="btn btn-link btn-normal btn-primary" target="@linkTarget">read more</a></div>
+            </div> 
+        </div>
+    }
+        </div>
+}

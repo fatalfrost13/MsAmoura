@@ -1,0 +1,139 @@
+﻿@using Iomer.Umbraco.Extensions.String
+@using umbraco.NodeFactory
+@using System.Configuration
+@using Iomer.Umbraco.Extensions
+@using Iomer.Umbraco.Extensions.String
+
+@inherits umbraco.MacroEngines.DynamicNodeContext
+
+@functions{
+    bool IsSelected(int nodeId)
+    {
+        var isSelected = false;
+        var currentNode = umbraco.NodeFactory.Node.GetCurrent();
+        var checkNode = new umbraco.NodeFactory.Node(nodeId);
+
+        while (currentNode != null && isSelected == false)
+        {
+            if (currentNode.Id == checkNode.Id)
+            {
+                currentNode = null;
+                isSelected = true;
+            }
+            else
+            {
+                if (currentNode.Parent != null)
+                {
+                    currentNode = new umbraco.NodeFactory.Node(currentNode.Parent.Id);
+                }
+                else
+                {
+                    currentNode = null;
+                }
+            }
+        }
+
+        return isSelected;
+    }
+}
+
+
+@helper Traverse(dynamic node)
+{
+    var maxLevelForSubNav = String.IsNullOrEmpty(Parameter.maxLevelForSubNav) ? 4 : int.Parse(Parameter.maxLevelForSubNav);
+    var navClass = String.IsNullOrEmpty(Parameter.navClass) ? "" : Parameter.navClass;
+    var startLevel = String.IsNullOrEmpty(Parameter.startLevel) ? 1 : int.Parse(Parameter.startLevel);
+    
+    var allowAliases = String.IsNullOrEmpty(Parameter.allowAliases) ? "" : Parameter.allowAliases;
+    
+    //separates aliases in a string so we can use IndexOf to find aliases that match ",textPage,"
+    var allowAliasesSeparate = allowAliases;
+    if (allowAliasesSeparate != "")
+    {
+        allowAliasesSeparate = "," + allowAliasesSeparate + ",";
+    }
+    
+    //var items = node.Children.Where("umbracoNaviHide != true");
+    var items = node.Children;
+
+    string strAliases = allowAliases;
+    var allowAliasesList = strAliases.Split(',').ToList();
+    var itemNodes = new List<Node>();
+    foreach (var item in items)
+    {
+        itemNodes.Add(new Node(item.Id));
+    }
+    itemNodes = itemNodes
+        .Where(i => !i.NodeHidden() && (library.HasAccess(i.Id, i.Path)))
+        .Where(i => allowAliasesList.Contains(i.NodeTypeAlias))
+        .ToList();
+
+    var index = 0;
+    foreach (var item in itemNodes)
+    {
+        if ((item.Level > maxLevelForSubNav && maxLevelForSubNav != 0)) {
+            continue;
+        }
+        if (node.Level == startLevel && index == 0) {
+            @Html.Raw("<ul id=\"menu-footer-menu\" class=\"" + navClass + "\">")
+            @Html.Raw("<li><a href=\"/\">Home</a></li>")
+        }
+        else {
+            if (index == 0) {
+                @Html.Raw("<ul class=\"sub-menu\">")
+            }
+        }
+
+        //bool selected = Array.IndexOf(Model.Path.Split(','), item.Id.ToString()) >= 0;
+        var selected = item.Id == Model.Id || IsSelected(item.Id);
+        
+        var liClass = "";
+        if (selected == true){
+            liClass = "current";   
+        }
+        var itemChildren = item.ChildrenAsList.Where(i => !i.NodeHidden() && (library.HasAccess(i.Id, i.Path))).Where(i => allowAliasesList.Contains(i.NodeTypeAlias)).ToList();
+
+        <li
+           @if (itemChildren.Any())
+           {
+               if (liClass == "") { liClass = "menu-item-"; } else { liClass += " menu-item-"; }
+               @Html.Raw(" class=\"" + liClass + item.Id.ToString() + "\"")
+           }
+           else {if(liClass != "")
+           {
+               liClass += " menu-item-";
+               @Html.Raw(" class=\"" + liClass + item.Id.ToString() + "\"")
+           }}
+        >
+            @Html.Raw(StringUtility.FormatTitle(item.Id))
+            @Traverse(item)
+        </li>
+        index++;
+    }
+    
+    if (node.Level == 1)
+    {
+        //show login/logout
+        if (HttpContext.Current.User.Identity.IsAuthenticated){
+            <li><a href="/login/?logout=1">Logout</a></li>   
+        }else{
+            <li><a href="/members/">Login</a></li> 
+        }
+    }
+
+    if (index <= 0)
+    {
+        return;
+    }
+    @Html.Raw("</ul>")
+}
+
+@{
+    var startLevel = String.IsNullOrEmpty(Parameter.startLevel) ? 1 : int.Parse(Parameter.startLevel);
+}
+
+@Traverse(@Model.AncestorOrSelf(startLevel))
+
+
+
+

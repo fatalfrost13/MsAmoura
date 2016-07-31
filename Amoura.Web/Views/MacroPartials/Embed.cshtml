@@ -1,0 +1,13 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+@using umbraco.MacroEngines
+
+@{
+    var macroParams = Model.MacroParameters;
+
+    var embedCode = macroParams.SingleOrDefault(x => x.Key == "embedCode").Value.ToString();
+
+    if (!string.IsNullOrEmpty(embedCode))
+    {
+        @Html.Raw(embedCode)
+    }
+}

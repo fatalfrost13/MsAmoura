@@ -1,0 +1,93 @@
+﻿@inherits UmbracoViewPage<IPublishedContent>
+@{
+    ViewBag.Title = "Footer";
+}
+
+<footer class="motopress-wrapper footer">
+<div class="container">
+<div class="row">
+<div class="span12" data-motopress-wrapper-file="wrapper/wrapper-footer.php" data-motopress-wrapper-type="footer" data-motopress-id="5431c72f79eb3">
+
+<!--
+<div class="line_ver_1">
+<div class="line_ver_2">
+<div class="row footer-widgets">
+<div class="span4" data-motopress-type="dynamic-sidebar" data-motopress-sidebar-id="footer-sidebar-1">
+<div id="text-6"><h4>Hot Interview</h4> <div class="textwidget"><img class="alignnone size-full wp-image-1887" alt="" src="/content/uploads/2013/08/page1_img5.jpg" width="350" height="176"/>
+<h6>Mertyasera kytrasa luyMugile cen as stricies phale dera sneaedes swearsitaers ease irmentas merasaese kuayse lytrsaseras.</h6>
+<p>Koleacene anritma hases dyulety. Cumaser kertyase socisera natoqu eagnis dist mte dulme feugiata lecenaser stricies phaserdatyfena nec sit amm eer erment. Utdolores tyasera miatseInteger rutrum uisque nulla.</p>
+<a href="about" title="more" class="btn btn-default btn-normal btn-inline " target="_self">more</a>  </div>
+</div> </div>
+<div class="span3 offset1" data-motopress-type="dynamic-sidebar" data-motopress-sidebar-id="footer-sidebar-2">
+<div id="text-7"><h4>Popular</h4> <div class="textwidget"><p>Cumaser kertyase socisera natoqu eagnis dist mte dulmuese feugiata sitersa amm easer ermen:</p>
+<ul>
+<li><a href="#">sit avertas dero</a></li>
+<li><a href="#">taserto yaendala miaser</a></li>
+<li><a href="#">mertase deles neory</a></li>
+<li><a href="#">verode fase</a></li>
+<li><a href="#">avertelero ferose</a></li>
+<li><a href="#">taserto yndolase miaser</a></li>
+<li><a href="#">mertaeleras neory</a></li>
+<li><a href="#">verode fertase</a></li>
+<li><a href="#">ntrsasas liroeiusa rose</a></li>
+<li><a href="#">buays telero</a></li>
+</ul>
+<a href="portfolio" title="more" class="btn btn-default btn-normal btn-inline " target="_self">more</a>  </div>
+</div> </div>
+<div class="span3 offset1" data-motopress-type="dynamic-sidebar" data-motopress-sidebar-id="footer-sidebar-3">
+<div id="my_poststypewidget-8"><h4>Top Star News</h4><ul class='post-list unstyled'>
+<li class="cat_post_item-1 clearfix">
+<figure class="featured-thumbnail thumbnail">
+<a href="http://livedemo00.template-help.com/wordpress_46021/vestibulum-ante-ipsum-primis/mauris-posuere/">
+<img src="http://livedemo00.template-help.com/wordpress_46021/wp-content/uploads/2013/08/img-18-270x171.jpg" width="270" height="171" alt="Mauris posuere"/>
+</a>
+</figure>
+<h4 class="post-list_h"><a class="post-title" href="http://livedemo00.template-help.com/wordpress_46021/vestibulum-ante-ipsum-primis/mauris-posuere/" rel="bookmark" title="Mauris posuere">Mauris posuere</a></h4>
+<div class="excerpt">
+</div>
+</li> 
+<li class="cat_post_item-2 clearfix">
+<figure class="featured-thumbnail thumbnail">
+<a href="http://livedemo00.template-help.com/wordpress_46021/in-faucibus-orci-luctus/donec-tempor-libero/">
+<img src="http://livedemo00.template-help.com/wordpress_46021/wp-content/uploads/2013/08/img-21-270x171.jpg" width="270" height="171" alt="Donec tempor libero"/>
+</a>
+</figure>
+<h4 class="post-list_h"><a class="post-title" href="http://livedemo00.template-help.com/wordpress_46021/in-faucibus-orci-luctus/donec-tempor-libero/" rel="bookmark" title="Donec tempor libero">Donec tempor libero</a></h4>
+<div class="excerpt">
+</div>
+</li> 
+</ul>
+</div> </div>
+</div>
+</div>
+</div>
+-->
+
+<div class="row">
+<div class="span12" data-motopress-type="static" data-motopress-static-file="static/static-footer-nav.php">
+<nav class="nav footer-nav">
+@Umbraco.RenderMacro("FooterNavigation", new { maxLevelForSubNav = 2, navClass = "menu", startLevel="1", allowAliases="textPage,redirectPage,eventList,newsList,frequentlyAskedQuestions,list,search,formPage,photoGalleryPage" })
+@*<ul id="menu-footer-menu" class="menu"><li id="menu-item-1816" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-203 current_page_item menu-item-1816"><a href="http://livedemo00.template-help.com/wordpress_46021/">Home</a></li>
+<li id="menu-item-1821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1821"><a href="http://livedemo00.template-help.com/wordpress_46021/about/">About</a></li>
+<li id="menu-item-1819" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1819"><a href="http://livedemo00.template-help.com/wordpress_46021/portfolio/">Gallery</a></li>
+<li id="menu-item-1817" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1817"><a href="http://livedemo00.template-help.com/wordpress_46021/blog/">Blog</a></li>
+<li id="menu-item-1820" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1820"><a href="http://livedemo00.template-help.com/wordpress_46021/links/">Links</a></li>
+<li id="menu-item-1818" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1818"><a href="http://livedemo00.template-help.com/wordpress_46021/contacts/">Contacts</a></li>
+</ul> *@
+
+</nav>
+</div>
+</div>
+
+<div class="row">
+<div class="span12" data-motopress-type="static" data-motopress-static-file="static/static-footer-text.php">
+<div class="copyright">
+<div id="footer-text" class="footer-text">
+<a href="/" title="" class="site-name">amoura</a> &copy; 2014 <i>&bull;</i> <b><a href="/privacy/" title="Privacy Policy">Privacy Policy</a></b>
+ 
+</div> </div>
+</div>
+</div> </div>
+</div>
+</div>
+</footer>
