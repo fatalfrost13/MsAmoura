@@ -659,3 +659,17 @@ body .text-color2
     font-weight: 300;
     margin-bottom: 10px;
 }
+
+.navbar-toggle 
+{
+    position: relative;
+    float: right;
+    margin-right: 15px;
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    background-color: black;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
