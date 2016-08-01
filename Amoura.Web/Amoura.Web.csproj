@@ -1178,6 +1178,7 @@
     <Content Include="Images\portfolio\web\udara\1.png" />
     <Content Include="Images\portfolio\web\whoor\1.jpg" />
     <Content Include="Images\print.png" />
+    <Content Include="Images\sm-sprite-new.png" />
     <Content Include="Images\sm-sprite.png" />
     <Content Include="Images\splashback.jpg" />
     <Content Include="Images\team\user1.png" />

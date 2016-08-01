@@ -394,7 +394,7 @@ body .text-color2
 	height:32px;
 	display:block;
 	float:left;
-	background:url(/Images/sm-sprite.png) no-repeat;
+	background:url(/Images/sm-sprite-new.png) no-repeat;
 	margin-right:10px;
 }
 
@@ -420,6 +420,10 @@ body .text-color2
 }
 
 .sm-skype
+{
+	background-position:0px -128px;
+}
+.sm-instagram
 {
 	background-position:0px -128px;
 }
