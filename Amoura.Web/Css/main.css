@@ -71,14 +71,30 @@ body .text-color2
 {
 	padding-top:70px;
 }
+.section0 {
+
+}
+.section0 h2 
+{
+    font-family: "Roboto",sans-serif;
+	font-weight: 300 !important;
+	font-size: 48px;
+	color:#fff;
+}
+.section0 p
+{
+	font-size: 20px;
+	font-weight: 300;
+	color: #fff;
+}
 
 .section1
 {
 	background: url(/Images/workspace-main.jpg);
 	background-repeat:no-repeat;
-	background-attachment:fixed;
-	background-position:50% -400px; 
-	padding-top:170px;
+	/*background-attachment:fixed;*/
+	/*background-position:50% -400px;*/ 
+	/*padding-top:170px;*/
 }
 
 .section1 .main-logo

@@ -44,17 +44,6 @@
                 </a>
             </div>
 
-            <!--
-            <div class="collapse navbar-collapse ">
-                <ul class="nav navbar-nav">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#work">Work</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>-->
-
             <div class="collapse navbar-collapse ">
                 @Html.Partial("MsNavigation", Model.Content)
             </div>
@@ -63,14 +52,15 @@
 
 
     <div class="content" id="home">
-        <div class="section section1">
+        <div class="section section1" style="background: url(/Images/workspace-main.jpg);">
+        @*<div class="section section1" style="background: url(/Images/home/home1.png); background-repeat: no-repeat;">*@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-6 col-sm-4 col-md-2 col-lg-4 col-xs-offset-3 col-sm-offset-4 col-md-offset-4 main-logo"></div>
                 </div>
-                <div class="row">
+                @*<div class="row">
                     <h2>Ms Amoura</h2>
-                </div>
+                </div>*@
                 <div class="row">
                     <p>
                         @Umbraco.Field("itemDescription")
