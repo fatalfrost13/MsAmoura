@@ -92,16 +92,10 @@
         {
             <div><hr /></div>
         }
-        <div class="section" id="section@(page.Id)">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 rowContent">
-                        <h1 id="aboutus-title">@page.GetTitle()</h1>
-                        <p>@Html.Raw(NodeUtility.GetNodeValue(page, DocumentFields.bodyText.ToString()))</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        if (page.NodeTypeAlias == DocumentTypes.textPage.ToString())
+        {
+            @Html.Partial("MsTextPage", page)
+        }
         index++;
     }
 

@@ -1163,8 +1163,8 @@
     <Content Include="Images\branding.png" />
     <Content Include="Images\fav.png" />
     <Content Include="Images\footer-bg.jpg" />
-    <Content Include="Images\home\home1.jpg" />
-    <Content Include="Images\home\home2.jpg" />
+    <Content Include="Images\home\home1.png" />
+    <Content Include="Images\home\home2.png" />
     <Content Include="Images\logo-big-NEW.png" />
     <Content Include="Images\msAmouraLogo.png" />
     <Content Include="Images\msAmouraLogo_black.jpg" />
@@ -4685,6 +4685,7 @@
     <Content Include="Views\SplashPage.cshtml" />
     <Content Include="Views\MSMaster.cshtml" />
     <Content Include="Views\Partials\MsNavigation.cshtml" />
+    <Content Include="Views\Partials\MsTextPage.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

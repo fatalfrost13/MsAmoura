@@ -1,0 +1,15 @@
+﻿@inherits UmbracoViewPage<Node>
+@using umbraco.NodeFactory;
+@using Iomer.Umbraco.Extensions;
+@using Amoura.Web.Data;
+
+<div class="section" id="section@(Model.Id)">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 rowContent">
+                <h1>@Model.GetTitle()</h1>
+                <p>@Html.Raw(NodeUtility.GetNodeValue(Model, DocumentFields.bodyText.ToString()))</p>
+            </div>
+        </div>
+    </div>
+</div>
