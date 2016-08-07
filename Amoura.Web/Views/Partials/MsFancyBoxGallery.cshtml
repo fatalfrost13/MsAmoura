@@ -1,0 +1,40 @@
+﻿@inherits UmbracoViewPage<Node>
+@using umbraco.NodeFactory;
+@using Iomer.Umbraco.Extensions;
+@using Amoura.Web.Data;
+@using Iomer.Umbraco.Extensions.Media;
+@using Amoura.Web.Helpers
+@{ 
+    var fancyboxId = "fancybox" + Model.Id;
+    var umbracoHelper = new UmbracoHelper(UmbracoContext.Current);
+    var content = umbracoHelper.GetById(Model.Id);
+    var mediaItems = MediaUtility.GetMediaList(content, DocumentFields.galleryPicker.ToString());
+}
+
+@if (mediaItems.Any())
+{
+<div class="section" id="section@(Model.Id)">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 rowContent">
+                <h1>@Model.GetTitle()</h1>
+                <p>@Html.Raw(NodeUtility.GetNodeValue(Model, DocumentFields.itemDescription.ToString()))</p>
+                <p>
+                    @foreach (var mediaItem in mediaItems.Where(i => i.ContentType.Alias == DocumentFields.galleryImage.ToString()))
+                    {
+                        //var mediaUrl = MediaUtility.GetMediaPath(mediaItem.Id, DocumentFields.imageCropper.ToString());
+                        var mediaUrl = MediaUtility.GetMediaCropUrl(mediaItem, DocumentFields.imageCropper.ToString(), "");
+                        var mediaCroppedUrl = MediaUtility.GetMediaCropUrl(mediaItem, DocumentFields.imageCropper.ToString(), "thumbnail");
+                        var mediaDescription = mediaItem.GetMediaValue(DocumentFields.imageDescription.ToString());
+                        <a class="fancybox @fancyboxId" href="@mediaUrl" data-fancybox-group="gallery" title="@mediaDescription"><img src="@mediaCroppedUrl" alt="" /></a>
+                    }
+                    @*<a class="fancybox @fancyboxId" href="/FancyBox/img/1_b.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="/FancyBox/img/1_s.jpg" alt="" /></a>
+                    <a class="fancybox @fancyboxId" href="/FancyBox/img/2_b.jpg" data-fancybox-group="gallery" title="Etiam quis mi eu elit temp"><img src="/FancyBox/img/2_s.jpg" alt="" /></a>
+                    <a class="fancybox @fancyboxId" href="/FancyBox/img/3_b.jpg" data-fancybox-group="gallery" title="Cras neque mi, semper leon"><img src="/FancyBox/img/3_s.jpg" alt="" /></a>
+                    <a class="fancybox @fancyboxId" href="/FancyBox/img/4_b.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="/FancyBox/img/4_s.jpg" alt="" /></a>*@
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+}

@@ -283,8 +283,12 @@
     <Compile Include="Iomer.Extensions\String\StringUtility.cs" />
     <Compile Include="Iomer.Extensions\WebControls\WebControlUtility.cs" />
     <Compile Include="Iomer.Umbraco.Extensions\Content\ContentUtility.cs" />
+    <Compile Include="Iomer.Umbraco.Extensions\Content\QueryUtility.cs" />
+    <Compile Include="Iomer.Umbraco.Extensions\Custom\ContextHelper.cs" />
+    <Compile Include="Iomer.Umbraco.Extensions\Custom\CustomUmbracoHelper.cs" />
     <Compile Include="Iomer.Umbraco.Extensions\Custom\MultiUrlPicker.cs" />
     <Compile Include="Iomer.Umbraco.Extensions\Definitions.cs" />
+    <Compile Include="Iomer.Umbraco.Extensions\Media\MediaUtility.cs" />
     <Compile Include="Iomer.Umbraco.Extensions\Node\NodeUtility.cs" />
     <Compile Include="Iomer.Umbraco.Extensions\Razor\RazorUtility.cs" />
     <Compile Include="Iomer.Umbraco.Extensions\String\StringUtility.cs" />
@@ -292,6 +296,7 @@
     <Compile Include="Models\AccountModel.cs" />
     <Compile Include="Models\ChangePasswordModels.cs" />
     <Compile Include="Models\MemberLoginModel.cs" />
+    <Compile Include="Models\StandardViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -1159,6 +1164,34 @@
     <Content Include="Email\images\emailHeader.jpg" />
     <Content Include="Email\images\RxAHeaderLogo.jpg" />
     <Content Include="Email\StandardTemplate.html" />
+    <Content Include="FancyBox\img\1_b.jpg" />
+    <Content Include="FancyBox\img\1_s.jpg" />
+    <Content Include="FancyBox\img\2_b.jpg" />
+    <Content Include="FancyBox\img\2_s.jpg" />
+    <Content Include="FancyBox\img\3_b.jpg" />
+    <Content Include="FancyBox\img\3_s.jpg" />
+    <Content Include="FancyBox\img\4_b.jpg" />
+    <Content Include="FancyBox\img\4_s.jpg" />
+    <Content Include="FancyBox\img\5_b.jpg" />
+    <Content Include="FancyBox\img\5_s.jpg" />
+    <Content Include="FancyBox\lib\jquery-1.10.1.min.js" />
+    <Content Include="FancyBox\lib\jquery-1.9.0.min.js" />
+    <Content Include="FancyBox\lib\jquery.mousewheel-3.0.6.pack.js" />
+    <Content Include="FancyBox\source\blank.gif" />
+    <Content Include="FancyBox\source\fancybox_loading%402x.gif" />
+    <Content Include="FancyBox\source\fancybox_loading.gif" />
+    <Content Include="FancyBox\source\fancybox_overlay.png" />
+    <Content Include="FancyBox\source\fancybox_sprite%402x.png" />
+    <Content Include="FancyBox\source\fancybox_sprite.png" />
+    <Content Include="FancyBox\source\helpers\fancybox_buttons.png" />
+    <Content Include="FancyBox\source\helpers\jquery.fancybox-buttons.css" />
+    <Content Include="FancyBox\source\helpers\jquery.fancybox-buttons.js" />
+    <Content Include="FancyBox\source\helpers\jquery.fancybox-media.js" />
+    <Content Include="FancyBox\source\helpers\jquery.fancybox-thumbs.css" />
+    <Content Include="FancyBox\source\helpers\jquery.fancybox-thumbs.js" />
+    <Content Include="FancyBox\source\jquery.fancybox.css" />
+    <Content Include="FancyBox\source\jquery.fancybox.js" />
+    <Content Include="FancyBox\source\jquery.fancybox.pack.js" />
     <Content Include="Images\big-mac.jpg" />
     <Content Include="Images\branding.png" />
     <Content Include="Images\fav.png" />
@@ -4686,6 +4719,8 @@
     <Content Include="Views\MSMaster.cshtml" />
     <Content Include="Views\Partials\MsNavigation.cshtml" />
     <Content Include="Views\Partials\MsTextPage.cshtml" />
+    <Content Include="Views\Partials\MsFancyBoxGallery.cshtml" />
+    <Content Include="Views\Partials\MsFancyBoxResources.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

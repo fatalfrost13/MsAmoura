@@ -9,6 +9,7 @@ namespace Amoura.Web.Data
         container,
         featureItems,
         formPage,
+        galleryPage,
         homePage,
         listItem,
         photoGallery,

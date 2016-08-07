@@ -2,6 +2,8 @@
 @using umbraco.NodeFactory;
 @using Iomer.Umbraco.Extensions;
 @using Amoura.Web.Data;
+@using Amoura.Web.Models;
+
 @{
     Layout = null;
 }
@@ -51,16 +53,12 @@
     </div>
 
 
-    <div class="content" id="home">
+    @*<div class="content" id="home">
         <div class="section section1" style="background: url(/Images/workspace-main.jpg);">
-        @*<div class="section section1" style="background: url(/Images/home/home1.png); background-repeat: no-repeat;">*@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-6 col-sm-4 col-md-2 col-lg-4 col-xs-offset-3 col-sm-offset-4 col-md-offset-4 main-logo"></div>
                 </div>
-                @*<div class="row">
-                    <h2>Ms Amoura</h2>
-                </div>*@
                 <div class="row">
                     <p>
                         @Umbraco.Field("itemDescription")
@@ -68,12 +66,13 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>*@
 
     @{
         var homeNode = Node.GetCurrent();
         var subPages = homeNode.ChildrenAsList.Where(i => !i.NodeHidden()).Select(i => new Node(i.Id));
         var index = 1;
+        var galleryInitialized = false;
      }
 
     <div class="section section0" id="home">
@@ -95,6 +94,13 @@
         if (page.NodeTypeAlias == DocumentTypes.textPage.ToString())
         {
             @Html.Partial("MsTextPage", page)
+        }
+        else if (page.NodeTypeAlias == DocumentTypes.galleryPage.ToString())
+        {
+            var viewModel = new StandardViewModel { Initialized = galleryInitialized, PageNode = page };
+            @Html.Partial("MsFancyBoxResources", viewModel)
+            @Html.Partial("MsFancyBoxGallery", page)
+            galleryInitialized = true;
         }
         index++;
     }
