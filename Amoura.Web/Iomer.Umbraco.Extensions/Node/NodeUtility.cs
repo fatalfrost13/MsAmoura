@@ -288,6 +288,12 @@ namespace Iomer.Umbraco.Extensions
             return boolValue;
         }
 
+        public static bool GetNodeBoolean(this INode iNode, string alias)
+        {
+            var node = new Node(iNode.Id);
+            return node.GetNodeBoolean(alias);
+        }
+
         public static Guid GetNodeGuid(this Node node, string alias)
         {
             var guid = Guid.Empty;

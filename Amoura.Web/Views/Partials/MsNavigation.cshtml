@@ -41,7 +41,7 @@
 {
 
     
-    var allowAliases = "textPage,redirectPage,eventList,newsList,frequentlyAskedQuestions,list,search,formPage,photoGalleryPage";
+    var allowAliases = "textPage,galleryPage,redirectPage,eventList,newsList,frequentlyAskedQuestions,list,search,formPage,photoGalleryPage";
     
     //separates aliases in a string so we can use IndexOf to find aliases that match ",textPage,"
     var allowAliasesSeparate = allowAliases;
@@ -59,7 +59,7 @@
         itemNodes.Add(new Node(item.Id));
     }
     itemNodes = itemNodes
-        .Where(i => !i.NodeHidden() && (library.HasAccess(i.Id, i.Path)))
+        .Where(i => !i.NodeHidden() && !i.GetNodeBoolean("hideFromNavigation") && (library.HasAccess(i.Id, i.Path)))
         .Where(i => allowAliasesList.Contains(i.NodeTypeAlias))
         .ToList();
 
@@ -68,7 +68,7 @@
     {
         if (index == 0) {
             @Html.Raw("<ul class=\"nav navbar-nav\">")
-            @Html.Raw("<li><a href=\"/\">Home</a></li>")
+            @Html.Raw("<li><a href=\"/#home\">Home</a></li>")
         }
         else {
             if (index == 0) {
@@ -78,7 +78,7 @@
 
         var selected = item.Id == Model.Id || IsSelected(item.Id);
        
-        var itemChildren = item.ChildrenAsList.Where(i => !i.NodeHidden() && (library.HasAccess(i.Id, i.Path))).Where(i => allowAliasesList.Contains(i.NodeTypeAlias)).ToList();
+        var itemChildren = item.ChildrenAsList.Where(i => !i.NodeHidden() && !i.GetNodeBoolean("hideFromNavigation") && (library.HasAccess(i.Id, i.Path))).Where(i => allowAliasesList.Contains(i.NodeTypeAlias)).ToList();
 
         <li>
             <a href="#section@(item.Id)">@item.GetTitle()</a>

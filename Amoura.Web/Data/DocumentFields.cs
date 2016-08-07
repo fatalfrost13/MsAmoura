@@ -15,6 +15,7 @@ namespace Amoura.Web.Data
         embed,
         galleryImage,
         galleryPicker,
+        hideFromNavigation,
         image,
         imageCropper,
         imageDescription,

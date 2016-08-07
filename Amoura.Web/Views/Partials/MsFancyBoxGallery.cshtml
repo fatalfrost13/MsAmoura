@@ -9,6 +9,7 @@
     var umbracoHelper = new UmbracoHelper(UmbracoContext.Current);
     var content = umbracoHelper.GetById(Model.Id);
     var mediaItems = MediaUtility.GetMediaList(content, DocumentFields.galleryPicker.ToString());
+    var umbracoHelperPage = new UmbracoHelper(UmbracoContext.Current, content);
 }
 
 @if (mediaItems.Any())
@@ -32,6 +33,10 @@
                     <a class="fancybox @fancyboxId" href="/FancyBox/img/2_b.jpg" data-fancybox-group="gallery" title="Etiam quis mi eu elit temp"><img src="/FancyBox/img/2_s.jpg" alt="" /></a>
                     <a class="fancybox @fancyboxId" href="/FancyBox/img/3_b.jpg" data-fancybox-group="gallery" title="Cras neque mi, semper leon"><img src="/FancyBox/img/3_s.jpg" alt="" /></a>
                     <a class="fancybox @fancyboxId" href="/FancyBox/img/4_b.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="/FancyBox/img/4_s.jpg" alt="" /></a>*@
+                    <br />
+                    
+                    @umbracoHelperPage.Field("bodyText")
+
                 </p>
             </div>
         </div>

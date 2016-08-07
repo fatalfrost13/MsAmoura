@@ -2,13 +2,22 @@
 @using umbraco.NodeFactory;
 @using Iomer.Umbraco.Extensions;
 @using Amoura.Web.Data;
+@using Amoura.Web.Helpers;
+
+@{
+    var umbracoHelper = new UmbracoHelper(UmbracoContext.Current);
+    var content = umbracoHelper.GetById(Model.Id);
+    var umbracoHelperPage = new UmbracoHelper(UmbracoContext.Current, content);
+ }
 
 <div class="section" id="section@(Model.Id)">
     <div class="container">
         <div class="row">
             <div class="col-md-12 rowContent">
                 <h1>@Model.GetTitle()</h1>
-                <p>@Html.Raw(NodeUtility.GetNodeValue(Model, DocumentFields.bodyText.ToString()))</p>
+                <p>
+                    @umbracoHelperPage.Field("bodyText")
+                </p>
             </div>
         </div>
     </div>

@@ -90,11 +90,14 @@ body .text-color2
 
 .section1
 {
-	background: url(/Images/workspace-main.jpg);
-	background-repeat:no-repeat;
+	/*background: url(/Images/workspace-main.jpg);
+	background-repeat:no-repeat;*/
 	/*background-attachment:fixed;*/
 	/*background-position:50% -400px;*/ 
 	/*padding-top:170px;*/
+    height:300px !important;
+    padding-top: 15px !important;
+    background-color: #86117C;
 }
 
 .section1 .main-logo
@@ -495,7 +498,10 @@ body .text-color2
 	    margin: 0 auto;
 	    width: 75%;
 	}
-
+    .navbar-nav
+	{
+		background-color:#F8F8F8
+	}
 
  }
 

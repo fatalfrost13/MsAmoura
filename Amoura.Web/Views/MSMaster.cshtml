@@ -12,7 +12,7 @@
 <html>
 <head>
     <title>Ms Amoura</title>
-    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,400italic,500,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="/css/main.css">
 
@@ -22,6 +22,7 @@
     <script type="text/javascript" src="/Scripts/singlepagenav.js"></script>
     <script type="text/javascript" src="/Scripts/queryloader.js"></script>
     <script type="text/javascript" src="/Scripts/main.js"></script>
+    <script type="text/javascript" src="/Scripts/scrollspy.js"></script>
 
     <meta charset="UTF-8">
     <meta name="description" content="">
@@ -29,9 +30,10 @@
     <meta name="author" content="">
 
     <link rel="icon" type="image/png" href="/Images/msAmouraLogo_black.png" />
+
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top top-nav" role="navigation">
+    <div id="navbar" class="navbar navbar-inverse navbar-fixed-top top-nav" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -67,6 +69,21 @@
             </div>
         </div>
     </div>*@
+
+    <div class="content" id="home">
+        <div class="section section1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-4 col-md-2 col-lg-4 col-xs-offset-3 col-sm-offset-4 col-md-offset-4 main-logo"></div>
+                </div>
+                <div class="row">
+                    <p>
+                        @Umbraco.Field("itemDescription")
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     @{
         var homeNode = Node.GetCurrent();
@@ -123,4 +140,6 @@
     </div>
 
 </body>
+
+
 </html>
