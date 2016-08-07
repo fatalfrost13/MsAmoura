@@ -95,7 +95,7 @@ body .text-color2
 	/*background-attachment:fixed;*/
 	/*background-position:50% -400px;*/ 
 	/*padding-top:170px;*/
-    height:300px !important;
+    height:330px !important;
     padding-top: 15px !important;
     background-color: #86117C;
 }
@@ -355,6 +355,7 @@ body .text-color2
 .footer
 {
 	background: url(/Images/footer-bg.jpg) repeat-x left bottom #000;
+    margin-top:40px;
 	/*padding-top: 200px;*/
 }
 
@@ -398,7 +399,7 @@ body .text-color2
 .sm-wrapper
 {
 	margin-top:30px;
-	margin-bottom:50px;
+	/*margin-bottom:50px;*/
 }
 
 
@@ -663,6 +664,7 @@ body .text-color2
     margin-bottom: 20px;
     font-weight: 300;
     text-align: left;
+    margin-bottom:40px;
 }
 .rowContent h1{
     font-family: "Roboto", sans-serif;
