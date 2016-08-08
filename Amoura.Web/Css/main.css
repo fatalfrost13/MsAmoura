@@ -658,7 +658,8 @@ body .text-color2
 
 
 .rowContent{
-    color: #848484;
+    /*color: #848484;*/
+    color:black;
     font-size: 18px;
     font-family: "Roboto", sans-serif;
     margin-bottom: 20px;
@@ -669,21 +670,24 @@ body .text-color2
 .rowContent h1{
     font-family: "Roboto", sans-serif;
     font-size: 34px;
-    color: #626262 !important;
+    /*color: #626262 !important;*/
+    color: black !important;
     font-weight: 300;
     margin-bottom: 10px;
 }
 .rowContent h2{
     font-family: "Roboto", sans-serif;
     font-size: 24px;
-    color: #626262 !important;
+    /*color: #626262 !important;*/
+    color: black !important;
     font-weight: 300;
     margin-bottom: 10px;
 }
 .rowContent h3{
     font-family: "Roboto", sans-serif;
     font-size: 20px;
-    color: #626262 !important;
+    /*color: #626262 !important;*/
+    color: black !important;
     font-weight: 300;
     margin-bottom: 10px;
 }
