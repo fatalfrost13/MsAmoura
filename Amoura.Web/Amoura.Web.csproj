@@ -1403,6 +1403,37 @@
     <Content Include="Includes\template_instructions.html" />
     <Content Include="Iomer.Extensions\Email\Example.html" />
     <Content Include="Iomer.Umbraco.Extensions\Versions\6.1.2\Umbraco.Extensions.dll" />
+    <Content Include="Jssor\img\01.jpg" />
+    <Content Include="Jssor\img\02.jpg" />
+    <Content Include="Jssor\img\03.jpg" />
+    <Content Include="Jssor\img\04.jpg" />
+    <Content Include="Jssor\img\05.jpg" />
+    <Content Include="Jssor\img\06.jpg" />
+    <Content Include="Jssor\img\07.jpg" />
+    <Content Include="Jssor\img\08.jpg" />
+    <Content Include="Jssor\img\09.jpg" />
+    <Content Include="Jssor\img\10.jpg" />
+    <Content Include="Jssor\img\11.jpg" />
+    <Content Include="Jssor\img\12.jpg" />
+    <Content Include="Jssor\img\a17.png" />
+    <Content Include="Jssor\img\loading.gif" />
+    <Content Include="Jssor\img\t01.png" />
+    <Content Include="Jssor\img\thumb-01.jpg" />
+    <Content Include="Jssor\img\thumb-02.jpg" />
+    <Content Include="Jssor\img\thumb-03.jpg" />
+    <Content Include="Jssor\img\thumb-04.jpg" />
+    <Content Include="Jssor\img\thumb-05.jpg" />
+    <Content Include="Jssor\img\thumb-06.jpg" />
+    <Content Include="Jssor\img\thumb-07.jpg" />
+    <Content Include="Jssor\img\thumb-08.jpg" />
+    <Content Include="Jssor\img\thumb-09.jpg" />
+    <Content Include="Jssor\img\thumb-10.jpg" />
+    <Content Include="Jssor\img\thumb-11.jpg" />
+    <Content Include="Jssor\img\thumb-12.jpg" />
+    <Content Include="Jssor\js\jquery-1.11.3.min.js" />
+    <Content Include="Jssor\js\jssor.slider.debug.js" />
+    <Content Include="Jssor\js\jssor.slider.min.js" />
+    <Content Include="Jssor\js\jssor.slider.mini.js" />
     <Content Include="js\cScroll.js" />
     <Content Include="js\forms.js" />
     <Content Include="js\googleMap.js" />
@@ -4722,6 +4753,8 @@
     <Content Include="Views\Partials\MsTextPage.cshtml" />
     <Content Include="Views\Partials\MsFancyBoxGallery.cshtml" />
     <Content Include="Views\Partials\MsFancyBoxResources.cshtml" />
+    <Content Include="Views\Partials\MsJssorSlider.cshtml" />
+    <Content Include="Views\Partials\MsJssorSliderResources.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

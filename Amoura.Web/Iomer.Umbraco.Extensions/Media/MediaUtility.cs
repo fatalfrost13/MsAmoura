@@ -77,6 +77,21 @@ namespace Iomer.Umbraco.Extensions.Media
             return cropUrl;
         }
 
+        public static ImageCropData GetMediaCrop(this IMedia media, string alias, string cropAlias)
+        {
+            var crop = new ImageCropData();
+            var cropUrl = string.Empty;
+            var jsonValue = media.GetMediaValue(alias);
+
+            if (!string.IsNullOrEmpty(jsonValue))
+            {
+                var imageCrops = JsonConvert.DeserializeObject<ImageCropDataSet>(jsonValue);
+                cropUrl = imageCrops.Src;
+                crop = imageCrops.Crops.Where(i => i.Alias == cropAlias).SingleOrDefault();
+            }
+            return crop;
+        }
+
         public static List<IMedia> GetMediaList(this IPublishedContent content, string alias)
         {
             var mediaService = ApplicationContext.Current.Services.MediaService;

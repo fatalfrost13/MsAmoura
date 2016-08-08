@@ -6,6 +6,7 @@ namespace Amoura.Web.Data
         allowComments,
         bodyText,
         browserTitle,
+        carouselPicker,
         date,
         emailAdmin,
         emailBcc,

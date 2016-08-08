@@ -23,9 +23,9 @@
                 <p>
                     @foreach (var mediaItem in mediaItems.Where(i => i.ContentType.Alias == DocumentFields.galleryImage.ToString()))
                     {
-                        //var mediaUrl = MediaUtility.GetMediaPath(mediaItem.Id, DocumentFields.imageCropper.ToString());
+                        var m = Umbraco.TypedMedia(mediaItem.Id);
                         var mediaUrl = MediaUtility.GetMediaCropUrl(mediaItem, DocumentFields.imageCropper.ToString(), "");
-                        var mediaCroppedUrl = MediaUtility.GetMediaCropUrl(mediaItem, DocumentFields.imageCropper.ToString(), "thumbnail");
+                        var mediaCroppedUrl = m != null ? m.GetCropUrl("imageCropper", "thumbnail") : MediaUtility.GetMediaCropUrl(mediaItem, DocumentFields.imageCropper.ToString(), "thumbnail");
                         var mediaDescription = mediaItem.GetMediaValue(DocumentFields.imageDescription.ToString());
                         <a class="fancybox @fancyboxId" href="@mediaUrl" data-fancybox-group="gallery" title="@mediaDescription"><img src="@mediaCroppedUrl" alt="" /></a>
                     }

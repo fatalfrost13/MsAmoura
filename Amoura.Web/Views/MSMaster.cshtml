@@ -90,6 +90,7 @@
         var subPages = homeNode.ChildrenAsList.Where(i => !i.NodeHidden()).Select(i => new Node(i.Id));
         var index = 1;
         var galleryInitialized = false;
+        var carouselInitialized = false;
      }
 
     @*<div class="section section0" id="home">
@@ -118,6 +119,13 @@
             @Html.Partial("MsFancyBoxResources", viewModel)
             @Html.Partial("MsFancyBoxGallery", page)
             galleryInitialized = true;
+        }
+        else if (page.NodeTypeAlias == DocumentTypes.carouselPage.ToString())
+        {
+            var viewModel = new StandardViewModel { Initialized = carouselInitialized, PageNode = page };
+            @Html.Partial("MsJssorSliderResources", viewModel)
+            @Html.Partial("MsJssorSlider", page)
+            carouselInitialized = true;
         }
         index++;
     }

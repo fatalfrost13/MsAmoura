@@ -4,6 +4,7 @@ namespace Amoura.Web.Data
     public enum DocumentTypes
     {
         blankPage,
+        carouselPage,
         category,
         comment,
         container,
