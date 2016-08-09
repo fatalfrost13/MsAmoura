@@ -1159,7 +1159,6 @@
     <Content Include="Content\uploads\2014\askAmoura.jpg" />
     <Content Include="Content\uploads\2014\calendarBabes.jpg" />
     <Content Include="Css\bootstrap.css" />
-    <Content Include="Css\dev.css" />
     <Content Include="Css\main.css" />
     <Content Include="Email\images\emailHeader.jpg" />
     <Content Include="Email\images\RxAHeaderLogo.jpg" />
@@ -1192,215 +1191,19 @@
     <Content Include="FancyBox\source\jquery.fancybox.css" />
     <Content Include="FancyBox\source\jquery.fancybox.js" />
     <Content Include="FancyBox\source\jquery.fancybox.pack.js" />
-    <Content Include="Images\big-mac.jpg" />
-    <Content Include="Images\branding.png" />
     <Content Include="Images\fav.png" />
     <Content Include="Images\footer-bg.jpg" />
-    <Content Include="Images\home\home1.png" />
-    <Content Include="Images\home\home2.png" />
     <Content Include="Images\logo-big-NEW.png" />
     <Content Include="Images\msAmouraLogo.png" />
     <Content Include="Images\msAmouraLogo_black.jpg" />
     <Content Include="Images\msAmouraLogo_black.png" />
     <Content Include="Images\msamoura_logo.jpg" />
     <Content Include="Images\pm-brand.png" />
-    <Content Include="Images\portfolio\logo\1tl\1.jpg" />
-    <Content Include="Images\portfolio\logo\chocodiles\1.jpg" />
-    <Content Include="Images\portfolio\print\blackwelling\1.jpg" />
-    <Content Include="Images\portfolio\web\sajath\1.jpg" />
-    <Content Include="Images\portfolio\web\sajath\2.jpg" />
-    <Content Include="Images\portfolio\web\sankalana\1.jpg" />
-    <Content Include="Images\portfolio\web\udara\1.png" />
-    <Content Include="Images\portfolio\web\whoor\1.jpg" />
-    <Content Include="Images\print.png" />
     <Content Include="Images\sm-sprite-new.png" />
     <Content Include="Images\sm-sprite.png" />
     <Content Include="Images\splashback.jpg" />
-    <Content Include="Images\team\user1.png" />
-    <Content Include="Images\team\user2.png" />
-    <Content Include="Images\team\user3.png" />
-    <Content Include="Images\web-design.png" />
-    <Content Include="Images\web-dev.png" />
     <Content Include="Images\workspace-main.jpg" />
     <Content Include="Images\workspace-sub.jpg" />
-    <Content Include="Includes\css\bootstrap.css" />
-    <Content Include="Includes\css\flexslider.css" />
-    <Content Include="Includes\css\font-awesome.css" />
-    <Content Include="Includes\css\ie.css" />
-    <Content Include="Includes\css\prettify.css" />
-    <Content Include="Includes\css\prettyPhoto.css" />
-    <Content Include="Includes\css\responsive-utilities.css" />
-    <Content Include="Includes\css\responsive.css" />
-    <Content Include="Includes\css\style.css" />
-    <Content Include="Includes\fonts\fontawesome-webfont.svg" />
-    <Content Include="Includes\fonts\icomoon.dev.svg" />
-    <Content Include="Includes\fonts\icomoon.svg" />
-    <Content Include="Includes\google-code-prettify\prettify.css" />
-    <Content Include="Includes\google-code-prettify\prettify.js" />
-    <Content Include="Includes\img\btn-size.png" />
-    <Content Include="Includes\img\database-create-1.jpg" />
-    <Content Include="Includes\img\database-create-2.jpg" />
-    <Content Include="Includes\img\database-create-3.jpg" />
-    <Content Include="Includes\img\fancybox\fancybox_buttons.png" />
-    <Content Include="Includes\img\fancybox\fancybox_loading.gif" />
-    <Content Include="Includes\img\fancybox\fancybox_overlay.png" />
-    <Content Include="Includes\img\fancybox\fancybox_sprite.png" />
-    <Content Include="Includes\img\glyphicons-halflings-white.png" />
-    <Content Include="Includes\img\glyphicons-halflings.png" />
-    <Content Include="Includes\img\icon-1.png" />
-    <Content Include="Includes\img\icon-2.png" />
-    <Content Include="Includes\img\icon-3.png" />
-    <Content Include="Includes\img\logo-monster.jpg" />
-    <Content Include="Includes\img\logo-monster2.jpg" />
-    <Content Include="Includes\img\marker-1.png" />
-    <Content Include="Includes\img\nav-icon1.png" />
-    <Content Include="Includes\img\nav-icon10.png" />
-    <Content Include="Includes\img\nav-icon2.png" />
-    <Content Include="Includes\img\nav-icon3.png" />
-    <Content Include="Includes\img\nav-icon4.png" />
-    <Content Include="Includes\img\nav-icon5.png" />
-    <Content Include="Includes\img\nav-icon6.png" />
-    <Content Include="Includes\img\nav-icon7.png" />
-    <Content Include="Includes\img\nav-icon8.png" />
-    <Content Include="Includes\img\nav-icon9.png" />
-    <Content Include="Includes\img\pags.png" />
-    <Content Include="Includes\img\prettyPhoto\dark_rounded\btnNext.png" />
-    <Content Include="Includes\img\prettyPhoto\dark_rounded\btnPrevious.png" />
-    <Content Include="Includes\img\prettyPhoto\dark_rounded\contentPattern.png" />
-    <Content Include="Includes\img\prettyPhoto\dark_rounded\default_thumbnail.gif" />
-    <Content Include="Includes\img\prettyPhoto\dark_rounded\loader.gif" />
-    <Content Include="Includes\img\prettyPhoto\dark_rounded\sprite.png" />
-    <Content Include="Includes\img\prettyPhoto\dark_square\btnNext.png" />
-    <Content Include="Includes\img\prettyPhoto\dark_square\btnPrevious.png" />
-    <Content Include="Includes\img\prettyPhoto\dark_square\contentPattern.png" />
-    <Content Include="Includes\img\prettyPhoto\dark_square\default_thumbnail.gif" />
-    <Content Include="Includes\img\prettyPhoto\dark_square\loader.gif" />
-    <Content Include="Includes\img\prettyPhoto\dark_square\sprite.png" />
-    <Content Include="Includes\img\prettyPhoto\default\default_thumb.png" />
-    <Content Include="Includes\img\prettyPhoto\default\loader.gif" />
-    <Content Include="Includes\img\prettyPhoto\default\sprite.png" />
-    <Content Include="Includes\img\prettyPhoto\default\sprite_next.png" />
-    <Content Include="Includes\img\prettyPhoto\default\sprite_prev.png" />
-    <Content Include="Includes\img\prettyPhoto\default\sprite_x.png" />
-    <Content Include="Includes\img\prettyPhoto\default\sprite_y.png" />
-    <Content Include="Includes\img\prettyPhoto\facebook\btnNext.png" />
-    <Content Include="Includes\img\prettyPhoto\facebook\btnPrevious.png" />
-    <Content Include="Includes\img\prettyPhoto\facebook\contentPatternBottom.png" />
-    <Content Include="Includes\img\prettyPhoto\facebook\contentPatternLeft.png" />
-    <Content Include="Includes\img\prettyPhoto\facebook\contentPatternRight.png" />
-    <Content Include="Includes\img\prettyPhoto\facebook\contentPatternTop.png" />
-    <Content Include="Includes\img\prettyPhoto\facebook\default_thumbnail.gif" />
-    <Content Include="Includes\img\prettyPhoto\facebook\loader.gif" />
-    <Content Include="Includes\img\prettyPhoto\facebook\sprite.png" />
-    <Content Include="Includes\img\prettyPhoto\light_rounded\btnNext.png" />
-    <Content Include="Includes\img\prettyPhoto\light_rounded\btnPrevious.png" />
-    <Content Include="Includes\img\prettyPhoto\light_rounded\default_thumbnail.gif" />
-    <Content Include="Includes\img\prettyPhoto\light_rounded\loader.gif" />
-    <Content Include="Includes\img\prettyPhoto\light_rounded\sprite.png" />
-    <Content Include="Includes\img\prettyPhoto\light_square\btnNext.png" />
-    <Content Include="Includes\img\prettyPhoto\light_square\btnPrevious.png" />
-    <Content Include="Includes\img\prettyPhoto\light_square\default_thumbnail.gif" />
-    <Content Include="Includes\img\prettyPhoto\light_square\loader.gif" />
-    <Content Include="Includes\img\prettyPhoto\light_square\sprite.png" />
-    <Content Include="Includes\img\tail-content-top.gif" />
-    <Content Include="Includes\img\tail-content.gif" />
-    <Content Include="Includes\img\tail-lightbox-hover.png" />
-    <Content Include="Includes\img\wordpress\add_media.png" />
-    <Content Include="Includes\img\wordpress\backup.jpg" />
-    <Content Include="Includes\img\wordpress\cat1.jpg" />
-    <Content Include="Includes\img\wordpress\cat3.jpg" />
-    <Content Include="Includes\img\wordpress\faq.jpg" />
-    <Content Include="Includes\img\wordpress\folio.jpg" />
-    <Content Include="Includes\img\wordpress\folio_format.jpg" />
-    <Content Include="Includes\img\wordpress\folio_page.jpg" />
-    <Content Include="Includes\img\wordpress\folio_panel.jpg" />
-    <Content Include="Includes\img\wordpress\import_1st_step.jpg" />
-    <Content Include="Includes\img\wordpress\import_1st_step_2.jpg" />
-    <Content Include="Includes\img\wordpress\import_2nd_step.jpg" />
-    <Content Include="Includes\img\wordpress\import_2nd_step_2.jpg" />
-    <Content Include="Includes\img\wordpress\import_2nd_step_3.jpg" />
-    <Content Include="Includes\img\wordpress\import_permalinks.jpg" />
-    <Content Include="Includes\img\wordpress\insert-media.jpg" />
-    <Content Include="Includes\img\wordpress\install.jpg" />
-    <Content Include="Includes\img\wordpress\menu.jpg" />
-    <Content Include="Includes\img\wordpress\our_team.jpg" />
-    <Content Include="Includes\img\wordpress\permalinks.jpg" />
-    <Content Include="Includes\img\wordpress\plugins_install.jpg" />
-    <Content Include="Includes\img\wordpress\post_format.jpg" />
-    <Content Include="Includes\img\wordpress\post_format_audio.jpg" />
-    <Content Include="Includes\img\wordpress\post_format_image.jpg" />
-    <Content Include="Includes\img\wordpress\post_format_link.jpg" />
-    <Content Include="Includes\img\wordpress\post_format_quote.jpg" />
-    <Content Include="Includes\img\wordpress\post_format_standard.jpg" />
-    <Content Include="Includes\img\wordpress\post_format_video.jpg" />
-    <Content Include="Includes\img\wordpress\sc_menu.jpg" />
-    <Content Include="Includes\img\wordpress\sc_visual.jpg" />
-    <Content Include="Includes\img\wordpress\shortcode_alert.jpg" />
-    <Content Include="Includes\img\wordpress\shortcode_audio.jpg" />
-    <Content Include="Includes\img\wordpress\shortcode_banner.jpg" />
-    <Content Include="Includes\img\wordpress\shortcode_button.jpg" />
-    <Content Include="Includes\img\wordpress\shortcode_car.jpg" />
-    <Content Include="Includes\img\wordpress\shortcode_cat.jpg" />
-    <Content Include="Includes\img\wordpress\shortcode_comments.jpg" />
-    <Content Include="Includes\img\wordpress\shortcode_hero.jpg" />
-    <Content Include="Includes\img\wordpress\shortcode_icon.jpg" />
-    <Content Include="Includes\img\wordpress\shortcode_label.jpg" />
-    <Content Include="Includes\img\wordpress\shortcode_map.jpg" />
-    <Content Include="Includes\img\wordpress\shortcode_minipostgrid.jpg" />
-    <Content Include="Includes\img\wordpress\shortcode_minipostlist.jpg" />
-    <Content Include="Includes\img\wordpress\shortcode_postcycle.jpg" />
-    <Content Include="Includes\img\wordpress\shortcode_postgrid.jpg" />
-    <Content Include="Includes\img\wordpress\shortcode_postlist.jpg" />
-    <Content Include="Includes\img\wordpress\shortcode_progress.jpg" />
-    <Content Include="Includes\img\wordpress\shortcode_recentposts.jpg" />
-    <Content Include="Includes\img\wordpress\shortcode_recenttesti.jpg" />
-    <Content Include="Includes\img\wordpress\shortcode_roundabout.jpg" />
-    <Content Include="Includes\img\wordpress\shortcode_service.jpg" />
-    <Content Include="Includes\img\wordpress\shortcode_title.jpg" />
-    <Content Include="Includes\img\wordpress\shortcode_video.jpg" />
-    <Content Include="Includes\img\wordpress\slider.jpg" />
-    <Content Include="Includes\img\wordpress\slide_new.jpg" />
-    <Content Include="Includes\img\wordpress\testi.jpg" />
-    <Content Include="Includes\img\wordpress\theme_activate.jpg" />
-    <Content Include="Includes\img\wordpress\theme_options_blog.jpg" />
-    <Content Include="Includes\img\wordpress\theme_options_footer.jpg" />
-    <Content Include="Includes\img\wordpress\theme_options_general.jpg" />
-    <Content Include="Includes\img\wordpress\theme_options_logo.jpg" />
-    <Content Include="Includes\img\wordpress\theme_options_nav.jpg" />
-    <Content Include="Includes\img\wordpress\theme_options_portfolio.jpg" />
-    <Content Include="Includes\img\wordpress\theme_options_slider.jpg" />
-    <Content Include="Includes\img\wordpress\theme_options_slider_accordion.jpg" />
-    <Content Include="Includes\img\wordpress\theme_options_slider_camera.jpg" />
-    <Content Include="Includes\img\wordpress\theme_options_slider_none.jpg" />
-    <Content Include="Includes\img\wordpress\update.jpg" />
-    <Content Include="Includes\img\wordpress\uploaded-images.jpg" />
-    <Content Include="Includes\img\wordpress\widget_advanced_cycle.jpg" />
-    <Content Include="Includes\img\wordpress\widget_banners.jpg" />
-    <Content Include="Includes\img\wordpress\widget_flickr.jpg" />
-    <Content Include="Includes\img\wordpress\widget_recent_comments.jpg" />
-    <Content Include="Includes\img\wordpress\widget_recent_posts.jpg" />
-    <Content Include="Includes\img\wordpress\widget_social_networks.jpg" />
-    <Content Include="Includes\img\wordpress\widget_twitter.jpg" />
-    <Content Include="Includes\img\wordpress\widget_vcard.jpg" />
-    <Content Include="Includes\img\wordpress\wp-install-1-b.jpg" />
-    <Content Include="Includes\img\wordpress\wp-install-3-b.jpg" />
-    <Content Include="Includes\img\wordpress\wp-install-6-b.jpg" />
-    <Content Include="Includes\img\wordpress\wp-install-7-b.jpg" />
-    <Content Include="Includes\img\wordpress\wp_prefix.jpg" />
-    <Content Include="Includes\img\wordpress_logo.png" />
-    <Content Include="Includes\js\bootstrap-affix.js" />
-    <Content Include="Includes\js\comment-reply.min.js" />
-    <Content Include="Includes\js\html5shiv.js" />
-    <Content Include="Includes\js\jquery-migrate-1.1.0.js" />
-    <Content Include="Includes\js\jquery.easing.1.3.js" />
-    <Content Include="Includes\js\jquery.flexslider.js" />
-    <Content Include="Includes\js\jquery.js" />
-    <Content Include="Includes\js\jquery.nav.js" />
-    <Content Include="Includes\js\jquery.prettyPhoto.js" />
-    <Content Include="Includes\js\jquery.scrollTo.js" />
-    <Content Include="Includes\js\prettify.js" />
-    <Content Include="Includes\js\swfobject.js" />
-    <Content Include="Includes\template_instructions.html" />
     <Content Include="Iomer.Extensions\Email\Example.html" />
     <Content Include="Iomer.Umbraco.Extensions\Versions\6.1.2\Umbraco.Extensions.dll" />
     <Content Include="Jssor\img\01.jpg" />
@@ -1434,25 +1237,6 @@
     <Content Include="Jssor\js\jssor.slider.debug.js" />
     <Content Include="Jssor\js\jssor.slider.min.js" />
     <Content Include="Jssor\js\jssor.slider.mini.js" />
-    <Content Include="js\cScroll.js" />
-    <Content Include="js\forms.js" />
-    <Content Include="js\googleMap.js" />
-    <Content Include="js\hoverSprite.js" />
-    <Content Include="js\html5.js" />
-    <Content Include="js\jquery-1.11.1.min.js" />
-    <Content Include="js\jquery-1.7.1.js" />
-    <Content Include="js\jquery-ui-1.8.11.custom.min.js" />
-    <Content Include="js\jquery.animate-colors-min.js" />
-    <Content Include="js\jquery.backgroundpos.min.js" />
-    <Content Include="js\jquery.easing.1.3.js" />
-    <Content Include="js\jquery.mousewheel.js" />
-    <Content Include="js\jquery.transform-0.9.3.min.js" />
-    <Content Include="js\mathUtils.js" />
-    <Content Include="js\scripts.js" />
-    <Content Include="js\sprites.js" />
-    <Content Include="js\superfish.js" />
-    <Content Include="js\switcher.js" />
-    <Content Include="js\tms-0.4.1.js" />
     <Content Include="Config\Splashes\booting.aspx" />
     <Content Include="Config\Splashes\noNodes.aspx" />
     <Content Include="default.aspx" />
@@ -1461,7 +1245,6 @@
     <Content Include="Media\dummy.txt" />
     <Content Include="Media\forms\upload\dummy.txt" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\dummy.txt" />
     <Content Include="Scripts\jquery.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
@@ -4075,87 +3858,6 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Main.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Includes\fonts\fontawesome-webfont.eot" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Includes\fonts\fontawesome-webfont.ttf" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Includes\fonts\fontawesome-webfont.woff" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Includes\fonts\FontAwesome.otf" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Includes\fonts\icomoon.eot" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Includes\fonts\icomoon.ttf" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Includes\fonts\icomoon.woff" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Includes\less\alerts.less" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Includes\less\bootstrap.less" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Includes\less\code.less" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Includes\less\font-awesome.less" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Includes\less\grid.less" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Includes\less\icomoon.less" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Includes\less\labels-badges.less" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Includes\less\layouts.less" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Includes\less\mixins.less" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Includes\less\reset.less" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Includes\less\responsive-1200px-min.less" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Includes\less\responsive-navbar.less" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Includes\less\responsive-utilities.less" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Includes\less\responsive.less" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Includes\less\scaffolding.less" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Includes\less\style.less" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Includes\less\type.less" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Includes\less\utilities.less" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Includes\less\variables.less" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Content\plugins\akismet\.htaccess" />
   </ItemGroup>
   <ItemGroup>
@@ -4672,16 +4374,6 @@
     <Content Include="Content\uploads\2012\12\video2.ogv" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\HomePage.cshtml" />
-    <Content Include="Views\TextPage.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Partials\Header.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Partials\Footer.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="MacroScripts\Breadcrumb.cshtml" />
     <Content Include="MacroScripts\Navigation.cshtml" />
   </ItemGroup>
@@ -4718,16 +4410,7 @@
     </None>
     <None Include="Properties\PublishProfiles\Go Daddy.pubxml" />
     <None Include="Properties\PublishProfiles\msamoura.ca - Web Deploy.pubxml" />
-    <Content Include="Views\Partials\Slider.cshtml" />
-    <Content Include="Views\Partials\MemberLogin.cshtml" />
-    <Content Include="Views\Login.cshtml" />
-    <Content Include="Views\Partials\Profile.cshtml" />
-    <Content Include="Views\Profile.cshtml">
-      <SubType>Code</SubType>
-    </Content>
-    <Content Include="Views\Partials\FeatureItems.cshtml" />
     <Content Include="Views\MacroPartials\Embed.cshtml" />
-    <Content Include="Views\CustomPage.cshtml" />
     <Content Include="Views\MacroPartials\ImageGallery.cshtml" />
     <Content Include="Views\MacroPartials\InsertUmbracoForm.cshtml" />
     <Content Include="Views\MacroPartials\RenderUmbracoFormScripts.cshtml" />
@@ -4747,7 +4430,6 @@
     <Content Include="Views\Partials\Forms\Fieldtypes\FieldType.Textfield.cshtml" />
     <Content Include="Views\Partials\Forms\Form.cshtml" />
     <Content Include="Views\Partials\Forms\Script.cshtml" />
-    <Content Include="Views\SplashPage.cshtml" />
     <Content Include="Views\MSMaster.cshtml" />
     <Content Include="Views\Partials\MsNavigation.cshtml" />
     <Content Include="Views\Partials\MsTextPage.cshtml" />
