@@ -54,22 +54,6 @@
         </div>
     </div>
 
-
-    @*<div class="content" id="home">
-        <div class="section section1" style="background: url(/Images/workspace-main.jpg);">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-6 col-sm-4 col-md-2 col-lg-4 col-xs-offset-3 col-sm-offset-4 col-md-offset-4 main-logo"></div>
-                </div>
-                <div class="row">
-                    <p>
-                        @Umbraco.Field("itemDescription")
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>*@
-
     <div class="content" id="home">
         <div class="section section1">
             <div class="container">
@@ -93,41 +77,35 @@
         var carouselInitialized = false;
      }
 
-    @*<div class="section section0" id="home">
-        <div class="container">
-                <div class="row">
-                    <div class="col-md-12 rowContent">
-                        @Umbraco.Field("bodyText")
-                    </div>
-            </div>
-        </div>
-    </div>*@
-
-    @foreach(var page in subPages)
+    @foreach (var page in subPages)
     {
-        if (index > 1)
-        {
-            <div><hr /></div>
-        }
-        if (page.NodeTypeAlias == DocumentTypes.textPage.ToString())
-        {
-            @Html.Partial("MsTextPage", page)
-        }
-        else if (page.NodeTypeAlias == DocumentTypes.galleryPage.ToString())
-        {
-            var viewModel = new StandardViewModel { Initialized = galleryInitialized, PageNode = page };
-            @Html.Partial("MsFancyBoxResources", viewModel)
-            @Html.Partial("MsFancyBoxGallery", page)
-            galleryInitialized = true;
-        }
-        else if (page.NodeTypeAlias == DocumentTypes.carouselPage.ToString())
-        {
-            var viewModel = new StandardViewModel { Initialized = carouselInitialized, PageNode = page };
-            @Html.Partial("MsJssorSliderResources", viewModel)
-            @Html.Partial("MsJssorSlider", page)
-            carouselInitialized = true;
-        }
-        index++;
+        <div class="sectionContainer">
+            @if (index > 1)
+            {
+                <div style="clear:both;">&nbsp;</div>
+            }
+            @if (page.NodeTypeAlias == DocumentTypes.textPage.ToString())
+            {
+             @Html.Partial("MsTextPage", page)
+            }
+            else if (page.NodeTypeAlias == DocumentTypes.galleryPage.ToString())
+            {
+                var viewModel = new StandardViewModel { Initialized = galleryInitialized, PageNode = page };
+                @Html.Partial("MsFancyBoxResources", viewModel)
+                @Html.Partial("MsFancyBoxGallery", page)
+                galleryInitialized = true;
+            }
+            else if (page.NodeTypeAlias == DocumentTypes.carouselPage.ToString())
+            {
+                var viewModel = new StandardViewModel { Initialized = carouselInitialized, PageNode = page };
+                @Html.Partial("MsJssorSliderResources", viewModel)
+                @Html.Partial("MsJssorSlider", page)
+                carouselInitialized = true;
+            }
+            @{
+                index++;
+            }
+        </div>
     }
 
     <style>

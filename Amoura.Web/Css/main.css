@@ -705,3 +705,7 @@ body .text-color2
     border: 1px solid transparent;
     border-radius: 4px;
 }
+
+.sectionContainer:nth-child(even){
+    background: #F8F8F8;
+}
