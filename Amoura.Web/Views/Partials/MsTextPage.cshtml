@@ -3,18 +3,24 @@
 @using Iomer.Umbraco.Extensions;
 @using Amoura.Web.Data;
 @using Amoura.Web.Helpers;
+@using Iomer.Umbraco.Extensions.Content;
 
 @{
     var umbracoHelper = new UmbracoHelper(UmbracoContext.Current);
     var content = umbracoHelper.GetById(Model.Id);
     var umbracoHelperPage = new UmbracoHelper(UmbracoContext.Current, content);
+    var hideTitle = content.GetNodeBoolean("hideTitle");
  }
 
 <div class="section" id="section@(Model.Id)">
     <div class="container">
         <div class="row">
             <div class="col-md-12 rowContent">
-                <h1>@Model.GetTitle()</h1>
+
+                @if (!hideTitle)
+                {
+                    <h1>@Model.GetTitle()</h1>
+                }
                 <p>
                     @umbracoHelperPage.Field("bodyText")
                 </p>
