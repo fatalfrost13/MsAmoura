@@ -680,7 +680,7 @@ body .text-color2
     font-size: 24px;
     /*color: #626262 !important;*/
     color: black !important;
-    font-weight: 300;
+    font-weight: 400;
     margin-bottom: 10px;
 }
 .rowContent h3{
@@ -708,4 +708,22 @@ body .text-color2
 
 .sectionContainer:nth-child(even){
     background: #F8F8F8;
+}
+
+.contourPage{
+    margin-top:-20px;
+}
+
+.contourPage .contourFieldSet{
+    margin:0;
+    padding:0;
+}
+.contourPage .contourField
+{
+    padding-top:10px;
+}
+.contourPage .contourField .help-block{
+    margin-top:0px;
+    margin-bottom:0px;
+    font-size:12px;
 }
